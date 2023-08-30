@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+
     <hr style="border: 1px solid black;">
     {% for post in post_list %}
     <h1 style="color: crimson;" ><a  style="color: crimson; text-decoration:none " href="{% url 'blog:detail_post' post.pk %}" >{{ post.title }}</a></h1>
     <p6 style="color: rgb(0, 0, 0);">author : {{post.author  }}</p6>
-    <p style="color: blue;">{{ post.content |slice:":100" }} ...</p>
+    <p style="color: blue;">{{ post.content | truncatewords:30 }} </p>
     <hr style="border: 1px solid black;">
     {% endfor %}
-</body>
-</html>
+{% endblock content %}

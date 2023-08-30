@@ -7,8 +7,8 @@ from django.shortcuts import get_object_or_404
 
 class PostViewList(ListView):
     model = Post
-    template_name = 'list_posts.html'
+    template_name = 'blogs/list_posts.html'
     
 class DetailPost(DetailView):
     model = Post
-    template_name = 'detail_post.html'
+    template_name = 'blogs/detail_post.html'
