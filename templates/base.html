@@ -2,7 +2,13 @@
 <html>
     <head>
         <header>
-            <h6 style="color: royalblue;">liam instagram</h6>
+
+            <div>    
+                <h4 style="color: royalblue;"><a  style="color:rgb(246, 94, 0); text-decoration:none " href="{% url 'website:home' %}">HOME</a> | 
+                    <a style="color: rgb(93, 20, 220); text-decoration:none "  href="{% url 'blog:all_post' %}"  text-decoration:none> all post</a>
+                    | <a style="color: rgb(55, 86, 40); text-decoration:none "  href="{% url 'blog:new_post' %}"  text-decoration:none> create new post</a></h4> 
+    
+            </div>
         </header>
         <title>My Project</title>
     </head>

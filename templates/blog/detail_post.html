@@ -2,5 +2,5 @@
  {% block content %}
 <h1 style="color: blueviolet;">{{ post.title }}</h1>
 <p>{{ post.content }}</p>
-
+ <h3><a href="{% url 'blog:edit_post' post.pk %}">edit post</a></h3>
 {% endblock content %}
