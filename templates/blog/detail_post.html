@@ -3,4 +3,5 @@
 <h1 style="color: blueviolet;">{{ post.title }}</h1>
 <p>{{ post.content }}</p>
  <h3><a href="{% url 'blog:edit_post' post.pk %}">edit post</a></h3>
+ <h3><a href="{% url 'blog:delete_post' post.pk %}">delete post</a></h3>
 {% endblock content %}
