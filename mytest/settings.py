@@ -46,6 +46,11 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
 ]
 
+
+
+AUTH_USER_MODEL = 'accounts.CustomUser' 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -124,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'statics'
 
 ]
 # Default primary key field type
