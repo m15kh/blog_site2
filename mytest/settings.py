@@ -44,8 +44,13 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'website.apps.WebsiteConfig',
     'accounts.apps.AccountsConfig',
+    # 3rd Party
+    "crispy_forms", 
+    "crispy_bootstrap5",
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5" # new
+CRISPY_TEMPLATE_PACK = "bootstrap5" # new
 
 
 AUTH_USER_MODEL = 'accounts.CustomUser' 

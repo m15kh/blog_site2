@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
- {% block content %}
+
+
+
+{% block content %}   
+
 <h1 style="color: blueviolet;">{{ post.title }}</h1>
 <img src="{{ post.image.url }}" alt="Description of the image"  width="400" height="400">
-
 <p>{{ post.content }}</p>
- <h3><a href="{% url 'blog:edit_post' post.pk %}">edit post</a></h3>
- <h3><a href="{% url 'blog:delete_post' post.pk %}">delete post</a></h3>
-{% endblock content %}
+
+
+ {% endblock content %}
