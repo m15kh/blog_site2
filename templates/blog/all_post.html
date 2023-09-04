@@ -12,7 +12,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/c
 
 
             <div class="body">
-                <h3 class="m-t-0 m-b-5"><a href="blog-details.html">{{post.title}}</a></h3>
+                <h3 class="m-t-0 m-b-5"><a href="{% url 'blog:detail_post' post.pk %}">{{post.title}}</a></h3>
                 <ul class="meta">
                     <li><a href="javascript:void(0);"><i class="zmdi zmdi-account col-blue"></i>Posted By : {{post.author}}</a></li>
                     <!-- <li><a href="javascript:void(0);"><i class="zmdi zmdi-label col-amber"></i>Technology</a> -->
