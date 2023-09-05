@@ -1,3 +1,5 @@
+from django.forms.models import BaseModelForm
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView , DeleteView
@@ -5,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post
 from django.urls import reverse_lazy
 from .forms import PostForm
-
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -25,6 +27,9 @@ class PostViewNew(LoginRequiredMixin, CreateView):
     template_name = 'blog/new_post.html'
     reverse_lazy = 'blog:all_post'
     login_url = 'login'
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class PostViewEdit(LoginRequiredMixin, UpdateView):
