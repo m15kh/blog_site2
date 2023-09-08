@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-
+  
   <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,9 +43,11 @@
           <div class="d-flex">
             {% if not request.user.is_authenticated %}
             <a href="{% url 'signup' %}"> <button class="btn btn-outline-success me-2">Sign Up</button></a>
-            <a href="{% url 'login' %}"><button class="btn btn-outline-primary">login</button></a>
+            <a href="{% url 'login' %}"><button class="btn btn-outline-primary">log in</button></a>
             {% else %}
             <span class="btn btn-outline-dark me-2">{{request.user}}</span>
+            <a class="btn btn-outline-primary me-2" href="{% url 'password_change' %}">change password</a>
+
 
             <a href="{% url 'logout' %}" class="btn btn-outline-danger">Logout</a>
             {% endif %}
@@ -54,8 +56,7 @@
       </div>
     </nav>
 
-
-
+ 
   </header>
 
   <title>My Project</title>

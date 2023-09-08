@@ -145,4 +145,5 @@ STATICFILES_DIRS = [BASE_DIR / "statics"]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+#password forget console configruation
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
