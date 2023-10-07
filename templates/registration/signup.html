@@ -1,86 +1,88 @@
-{% extends 'cdn.html' %}
 {% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<title>sign up</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up </title>
+    <!-- Font Icon -->
+    <link rel="stylesheet"
+        href="{% static 'fonts/registration/material-icon/css/material-design-iconic-font.min.css' %}">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/registration/register.css' %}">
+</head>
 
-<section class="vh-100" style="background-color: #eee;">
-    <div class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-lg-12 col-xl-11">
-                <div class="card text-black" style="border-radius: 25px;">
-                    <div class="card-body p-md-5">
-                        <div class="row justify-content-center">
-                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+<body>
 
-                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+    <div class="main">
 
-                                <form class="mx-1 mx-md-4" method="post"  >{% csrf_token %}
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                        <div class="form-outline flex-fill mb-0">
-                                            <input type="text" id="inputUsername" placeholder="Username" required autofocus class="form-control"  
-                                            name="{{ form.username.name }}"/>
-                                  
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                        <div class="form-outline flex-fill mb-0">
-                                            <input type="email" id="inputEmail"  placeholder="email" required autofocus class="form-control" name="{{ form.email.name }}" />
-                                     
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                        <div class="form-outline flex-fill mb-0">
-                                            <input type="number" id="inputAge" placeholder="Age" required class="form-control"
-                                                   name="{{ form.age.name }}" />
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                        <div class="form-outline flex-fill mb-0">
-                                            <input type="password" name="{{ form.password1.name }}" id="inputPassword" placeholder="password" required autofocus class="form-control" class="form-control" />
-                                    
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                        <div class="form-outline flex-fill mb-0">
-                                            <input type="password" name="{{ form.password2.name }}" id="inputPassword" placeholder="repeat password"  required autofocus class="form-control" />
-                                                                          </div>
-                                    </div>
-
-
-
-                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                        <button class="btn btn-lg btn-primary btn-block" type="submit">log in</button>
-                                    </div>
-                                    {{ form.username.errors }}
-                                    {{ form.email.errors }}
-                                    {{ form.password1.errors }}
-                                    {{ form.password2.errors }}
-
-
-                                </form>
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" class="register-form" id="register-form"> {% csrf_token %}
+                            <div class="form-group">
+                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" id="inputUsername" placeholder="Username" required autofocus
+                                    class="form-control" name="{{ form.username.name }}" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" id="inputEmail" placeholder="email" required autofocus
+                                    class="form-control" name="{{ form.email.name }}" />
 
                             </div>
-                            <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                class="img-fluid" alt="Sample image">
+
+                            <div class="form-group">
+                                <label for="Age"><i class="zmdi zmdi-Age"></i></label>
+                                <input type="number" id="inputAge" placeholder="Age" required class="form-control"
+                                    name="{{ form.age.name }}" />
                             </div>
-                        </div>
+
+
+                            <div class="form-group">
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="{{ form.password1.name }}" id="inputPassword"
+                                    placeholder="password" required autofocus class="form-control"
+                                    class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="{{ form.password2.name }}" id="inputPassword"
+                                    placeholder="repeat password" required autofocus class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
+                                    statements in <p` href="#" class="term-service">Terms of service</p></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                            </div>
+                            <div>
+                                {{ form.username.errors }}
+                                {{ form.email.errors }}
+                                {{ form.password1.errors }}
+                                {{ form.password2.errors }}
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="{% static 'img/registration/signup.jpg' %}" alt="sing up image">
+                        </figure>
+                        <a href="{% url 'login' %}" class="signup-image-link">I am already member</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
     </div>
-</section>
-{% endblock content %}
+    <!-- JS -->
+    <script src="{% static 'vendor/registration/jquery/jquery.min.js' %}"></script>
+</body>
+
+</html>
