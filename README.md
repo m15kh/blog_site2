@@ -15,11 +15,11 @@
 
 
 ### :camera: Screenshots
-<div align="center"> <a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/1.png alt="logo" width=350 height=700 /></a>
-<a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/2.png alt="logo" width=350 height=700 /></a>
-  <a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/3.png alt="logo" width=350 height=700 /></a>
-<a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/4.png alt="logo" width=350 height=700 /></a>
-  <a href=""><img <a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/5.png alt="logo" width=350 height=700 /></a>
+<div align="center"> <a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/1.png alt="logo" width=850 height=400 /></a>
+<a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/2.png alt="logo" width=850 height=400 /></a>
+  <a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/3.png alt="logo" width=850 height=400 /></a>
+<a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/4.png alt="logo" width=850 height=400 /></a>
+  <a href=""><img <a href=""><img src=https://github.com/liam1550/blog_site2/blob/main/img%20project/5.png alt="logo" width=850 height=400 /></a>
 </div>
 
 
